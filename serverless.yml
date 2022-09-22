@@ -13,6 +13,13 @@ provider:
   stage: ${opt:stage, 'dev'}
   region: ap-southeast-2
   profile: tcmx
+  iamRoleStatements:
+    - Effect: Allow
+      Action:
+        - dynamodb:putItem
+      Resource: 
+        - arn:aws:dynamodb:#{AWS::Region}:#{AWS::AccountId}:table/AuctionsTable
+
 
 resources:
   Resources:
