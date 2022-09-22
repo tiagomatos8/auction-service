@@ -1,3 +1,5 @@
+org: TCMX
+console: true
 service: auction-service
 
 plugins:
